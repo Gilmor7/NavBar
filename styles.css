@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 1.6rem;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  letter-spacing: 1px;
+  background-color: purple;
+  transition: background-color 0.4s linear;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  background-color: #eee;
+  width: 45rem;
+  padding: 3rem;
+  border-radius: 0 0 3rem 3rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar__tab {
+  border-radius: 100px;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.4s linear;
+}
+
+.navbar__span {
+  max-width: 0;
+  overflow: hidden;
+}
+
+.navbar__tab.active .navbar__span {
+  max-width: 200px;
+  margin-left: 1rem;
+  transition: max-width 0.4s linear;
+}
+
+.navbar__tab.active.purple {
+  color: rgba(128, 0, 128, 1);
+  background-color: rgba(128, 0, 128, 0.25);
+}
+
+.navbar__tab.active.pink {
+  color: rgb(201, 14, 92);
+  background-color: rgb(201, 14, 92, 0.25);
+}
+
+.navbar__tab.active.yellow {
+  color: rgb(122, 165, 4);
+  background-color: rgb(122, 165, 4, 0.25);
+}
+
+.navbar__tab.active.teal {
+  color: rgb(0, 128, 128);
+  background-color: rgba(0, 128, 128, 0.25);
+}
+
+@media (max-width: 450px) {
+  .navbar {
+    width: 33rem;
+    padding: 2rem;
+  }
+
+  .navbar__tab {
+    font-size: 1.7rem;
+    padding: 1rem;
+  }
+}
